@@ -1,16 +1,15 @@
-<!-- Banner -->
+
 <!-- Note: The "styleN" class below should match that of the header element. -->
 <section id="banner" class="style2">
   <div class="inner">
-							<span class="image">
-								<img src="assets/images/pic07.jpg" alt="" />
-							</span>
+    <span class="image">
+      <img *ngIf="mainData" src="{{ getImageUrl() }}" alt="" />
+    </span>
     <header class="major">
-      <h1>Landing</h1>
+      <h1 *ngIf="mainData">{{ mainData?.title }}</h1>
     </header>
-    <div class="content">
-      <p>Lorem ipsum dolor sit amet nullam consequat<br />
-        sed veroeros. tempus adipiscing nulla.</p>
+    <div class="content" *ngIf="mainData">
+      <p>{{ mainData?.subtitle }}.</p>
     </div>
   </div>
 </section>

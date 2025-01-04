@@ -6,7 +6,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomePageComponent},
-  { path: 'home/landing', component: LandingPageComponent},
+  { path: 'home/landing/:url', component: LandingPageComponent},
   { path: '**', redirectTo: '/home' } // Wildcard route for a 404 page
 ];
 

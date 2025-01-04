@@ -2754,11 +2754,11 @@ input, select, textarea {
 			position: relative;
 			width: 40%;
 		}
-
+/*
 			.tiles article .image {
 				display: none;
 			}
-
+*/
 			.tiles article header {
 				position: relative;
 				z-index: 3;
@@ -3435,11 +3435,11 @@ input, select, textarea {
 			position: relative;
 			z-index: 2;
 		}
-
+/*
 			#banner > .inner .image {
 				display: none;
 			}
-
+*/
 			#banner > .inner header {
 				width: auto;
 			}
