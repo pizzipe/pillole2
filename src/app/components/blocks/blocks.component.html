@@ -4,13 +4,13 @@
   <section class="tiles" id="one">
     <article *ngFor="let block of blocks">
       <span class="image">
-        <img *ngIf="blocks" src="{{ getImageUrl(block) }}" alt=""/>
+        <img src="{{ getImageUrl(block) }}" alt=""/>
       </span>
       <header class="major">
         <h3>
-          <a *ngIf="blocks" [routerLink]="['/home/landing', block.landingId]" class="link">{{ block.title }}</a>
+          <a [routerLink]="['/landing', block.landingId]" class="link">{{ block.title }}</a>
         </h3>
-        <p *ngIf="blocks">{{ block.subtitle }}</p>
+        <p>{{ block.subtitle }}</p>
       </header>
     </article>
   </section>

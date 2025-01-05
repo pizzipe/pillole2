@@ -1,15 +1,15 @@
 
 <!-- Note: The "styleN" class below should match that of the header element. -->
 <section id="banner" class="style2">
-  <div class="inner">
+  <div *ngIf="mainData" class="inner">
     <span class="image">
-      <img *ngIf="mainData" src="{{ getImageUrl() }}" alt="" />
+      <img src="{{ getLandingImageUrl() }}" alt="" />
     </span>
     <header class="major">
-      <h1 *ngIf="mainData">{{ mainData?.title }}</h1>
+      <h1>{{ mainData.title }}</h1>
     </header>
-    <div class="content" *ngIf="mainData">
-      <p>{{ mainData?.subtitle }}.</p>
+    <div class="content">
+      <p>{{ mainData.subtitle }}</p>
     </div>
   </div>
 </section>
@@ -29,50 +29,19 @@
 
   <!-- Two -->
   <section id="two" class="spotlights">
-    <section>
-      <a href="generic.html" class="image">
-        <img src="assets/images/pic08.jpg" alt="" data-position="center center" />
+    <section *ngFor="let preview of previews">
+      <!--href="generic.html"-->
+      <a class="image">
+        <img src="{{ getArticleImageUrl(preview) }}" alt="" data-position="center center" />
       </a>
       <div class="content">
         <div class="inner">
           <header class="major">
-            <h3>Orci maecenas</h3>
+            <h3>{{ preview.title }}</h3>
           </header>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+          <p>{{ preview.subtitle }}</p>
           <ul class="actions">
-            <li><a href="generic.html" class="button">Learn more</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section>
-      <a href="generic.html" class="image">
-        <img src="assets/images/pic09.jpg" alt="" data-position="top center" />
-      </a>
-      <div class="content">
-        <div class="inner">
-          <header class="major">
-            <h3>Rhoncus magna</h3>
-          </header>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-          <ul class="actions">
-            <li><a href="generic.html" class="button">Learn more</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section>
-      <a href="generic.html" class="image">
-        <img src="assets/images/pic10.jpg" alt="" data-position="25% 25%" />
-      </a>
-      <div class="content">
-        <div class="inner">
-          <header class="major">
-            <h3>Sed nunc ligula</h3>
-          </header>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-          <ul class="actions">
-            <li><a href="generic.html" class="button">Learn more</a></li>
+            <li><a [routerLink]="['/article', preview.articleId]" class="button">Learn more</a></li>
           </ul>
         </div>
       </div>

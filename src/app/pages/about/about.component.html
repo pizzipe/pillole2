@@ -1,0 +1,16 @@
+
+<div id="main" class="alt">
+
+  <!-- One -->
+  <section id="one">
+    <div *ngIf="content" class="inner">
+      <header class="major">
+        <h1>{{ content.title }}</h1>
+      </header>
+      <div [innerHtml]="showHtml(content.body)"></div>
+    </div>
+  </section>
+
+</div>
+
+<app-contact></app-contact>

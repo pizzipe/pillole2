@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { ContactComponent } from '../../components/contact/contact.component';
 import { BlocksComponent } from '../../components/blocks/blocks.component';
 import { PocketbaseService } from '../../services/pocketbase/pocketbase.service';
@@ -7,7 +8,7 @@ import { PocketbaseService } from '../../services/pocketbase/pocketbase.service'
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, ContactComponent, BlocksComponent],
+  imports: [CommonModule, RouterLink, ContactComponent, BlocksComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })

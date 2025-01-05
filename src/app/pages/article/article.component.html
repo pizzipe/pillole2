@@ -1,0 +1,17 @@
+
+<div id="main" class="alt">
+
+  <!-- One -->
+  <section id="one">
+    <div *ngIf="article" class="inner">
+      <header class="major">
+        <h1>{{ article.title }}</h1>
+      </header>
+      <span class="image main"><img src="{{ getImageUrl(article) }}" alt="" /></span>
+      <div [innerHtml]="showHtml(article.body)"></div>
+    </div>
+  </section>
+
+</div>
+
+<app-contact></app-contact>
