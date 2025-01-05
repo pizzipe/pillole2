@@ -1,0 +1,21 @@
+/*@import url("../../../assets/css/common.css");*/
+
+#wrapper {
+  -moz-transition: -moz-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+  -webkit-transition: -webkit-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+  -ms-transition: -ms-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+  transition: filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
+  padding-top: 3.25em;
+}
+
+#wrapper.is-transitioning {
+  opacity: 0;
+}
+
+@media screen and (max-width: 736px) {
+
+  #wrapper {
+    padding-top: 2.75em;
+  }
+
+}

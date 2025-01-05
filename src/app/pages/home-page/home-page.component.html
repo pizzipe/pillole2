@@ -1,21 +1,20 @@
 
-<div id="wrapper">
-
-  <!-- Banner -->
-  <section id="banner" class="major">
-    <div *ngIf="mainSiteData" class="inner">
-      <header class="major">
-          <h1>{{ mainSiteData?.title }}</h1>
-      </header>
-      <div class="content">
-        <p>{{ mainSiteData?.subtitle }}</p>
+<!-- Banner -->
+<section id="banner" class="major">
+  <div *ngIf="mainSiteData" class="inner">
+    <header class="major">
+        <h1>{{ mainSiteData?.title }}</h1>
+    </header>
+    <div class="content">
+      <p>{{ mainSiteData?.subtitle }}</p>
 <!--        <ul class="actions">-->
 <!--          <li><a href="#one" class="button next scrolly">Get Started</a></li>-->
 <!--        </ul>-->
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<div id="main">
   <app-blocks></app-blocks>
 
   <!-- Two -->
@@ -30,7 +29,6 @@
       </ul>
     </div>
   </section>
-
-  <app-contact></app-contact>
-
 </div>
+
+<app-contact></app-contact>
